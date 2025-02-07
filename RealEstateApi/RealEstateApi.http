@@ -1,6 +1,6 @@
 @PropertyAPI_HostAddress = http://localhost:5168
 
-GET {{PropertyAPI_HostAddress}}/weatherforecast/
+GET {{PropertyAPI_HostAddress}}/properties/
 Accept: application/json
 
 ###

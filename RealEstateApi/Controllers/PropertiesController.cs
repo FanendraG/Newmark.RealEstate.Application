@@ -2,7 +2,7 @@
 using RealEstateApi.Models;
 using RealEstateApi.Services;
 
-namespace PropertyAPI.Controllers
+namespace RealEstateApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
