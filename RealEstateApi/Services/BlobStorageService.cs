@@ -2,12 +2,7 @@
 using Newtonsoft.Json;
 using RealEstateApi.Configurations;
 using RealEstateApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Net.Http;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RealEstateApi.Services
 {
@@ -22,6 +17,11 @@ namespace RealEstateApi.Services
             _httpClient = new HttpClient();
         }
 
+        /// <summary>
+        /// GetPropertiesAsync will connect to BlobStorage and get the Requested Json file, 
+        /// and handles error if file does not exist or in case of invalid or expired SAS token.
+        /// </summary>
+        /// <returns></returns>
         public async Task<(List<Property>?, string?)> GetPropertiesAsync()
         {
             try
