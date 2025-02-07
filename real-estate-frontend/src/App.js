@@ -2,13 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PropertyCard from "./components/PropertyCard";
 
+const API_URL = process.env.REACT_APP_API_URL; 
+
 const App = () => {
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get("https://localhost:7095/api/properties") 
+      .get(`${API_URL}/properties`) 
       .then((response) => {
         setProperties(response.data);
         setLoading(false);
